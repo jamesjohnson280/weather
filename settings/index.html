@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Settings - Weather App</title>
+<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i,700,700i,900,900i" rel="stylesheet">
+<link href="../css/ui-font.css" rel="stylesheet">
+<link href="../css/normalize.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</head>
+
+<body class="settings">
+<div class="container">
+    <section class="widget-settings">
+        <header>
+            <h1 class="branding">Settings</h1>
+            <a href="../" class="flex-right close"><span class="icon-close"></span></a>
+        </header>
+        <form class="settings-form">
+            <div class="location-section form-section">
+                <p class="label">Location</p>
+                <p class="location" id="location-name">Undefined</p>
+                <p> 
+                    <input type="hidden" id="location">
+                    <label for="new-location-name" class="label">Change Location</label><br>
+                    <span class="error" id="error"></span>
+                    <span class="flex-row">
+                        <input type="text" placeholder="City, State" id="new-location-name" name="new-location-name">
+                        <input type="hidden" id="new-location-lat">
+                        <input type="hidden" id="new-location-lon">
+                        <button type="button" id="update-button">Update</button>
+                    </span><!-- .flex-row -->
+                </p>
+                <p><button type="button" id="geolocation-button">Use Device Location</button></p>
+            </div><!-- .location-section -->
+            <div class="temp-section form-section">
+                <label class="label">Temperature Units</label><br>
+                <fieldset id="temp-units" class="toggle-button">
+                    <input type="radio" id="temp-f" name="temp-units" value="f" class="toggle-button">
+                    <label class="toggle-button left" for="temp-f">&deg;F</label>
+                    <input type="radio" id="temp-c" name="temp-units" value="c" class="toggle-button">
+                    <label class="toggle-button right" for="temp-c">&deg;C</label>
+                </fieldset>
+            </div><!-- .temp-section -->
+        </form><!-- .settings-form -->
+        <div class="copyright">
+            <p><a href="http://www.jamesjohnson.net" target="_blank">About this App</a></p>
+            <p>&copy; 2017 James Johnson</p>
+        </div><!-- .copyright -->
+    </section><!-- .widget-settings -->
+</div><!-- .container -->
+<script src="../js/modernizr.min.js"></script>
+<script src="../js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyDYYNbYSMVR2IV31kBQ-HIYGMJVOGoIHwg&libraries=places"></script>
+<script src="../js/library.js"></script>
+<script src="../js/settings.js"></script>
+</body>
+</html>

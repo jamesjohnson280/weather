@@ -1,0 +1,609 @@
+/* 
+ * Reset 
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+html, 
+body,
+.container {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Typography 
+ */
+
+body {
+	color: #FFF;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+h1, h2, h3, h4 {
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-size: 1.125rem;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #FFF;
+}
+
+a:hover {
+    color: #000;
+}
+
+/*
+ * Forms 
+ */
+button {
+    cursor: pointer;
+}
+
+form button {
+    background: #FFF;
+    border: none;
+    border-radius: 8px;
+    color: #0099CC;
+    font-size: 1.125rem;
+    height: 48px;
+    margin-bottom: 10px;
+    padding: 0 16px;
+    width: 100%;
+}
+
+
+form button:hover {
+    background: #000;
+    color: #FFF;
+}
+
+input[type="text"] {
+    background: #C8E4FF;
+    border: none;
+    color: #000;
+    font-size: 1.125rem;
+    height: 48px;
+    margin-bottom: 10px;
+    padding: 0 16px;
+    width: 100%;
+}
+
+input[type="text"]::placeholder {
+	color: #3399FF;
+}
+
+.label {
+    color: #C8E4FF;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+fieldset.toggle-button {
+    background: none;
+    border: none;
+    display: block;
+    height: 64px;
+    margin: 0 0 10px 0;
+    padding: 0;
+}
+
+input.toggle-button {
+    left: 0;
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+}
+
+label.toggle-button {
+    background: #FFF;
+    border: 3px #FFF solid;
+    color: #3399FF;
+    cursor: pointer;
+    display: inline-block;
+    float: left;
+    font-size: 2.25rem;
+    height: 64px;
+    margin: 0;
+    padding: 2px 0 0 0;
+    text-align: center;
+    width: 50%;
+    vertical-align: middle;
+}
+
+label.toggle-button:hover {
+    background: #000;
+    border: 3px #000 solid;
+    color: #FFF;
+}
+
+label.left {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+label.right {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+input:checked.toggle-button + label {
+    background: #3399FF;
+    border: 3px #FFF solid;
+    color: #FFF;
+}
+
+/*
+ * Forecast page 
+ */
+
+body {
+    background-color: #3399FF;
+    background-origin: border-box;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    padding: 16px;
+}
+
+.weather-today {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.weather-today header {
+    display: flex;
+    align-items: center;
+}
+
+a.settings {
+    background: none;
+    border: none;
+    color: #FFF;
+    font-size: 1.875rem;
+    margin-left: auto;
+	text-decoration: none;
+}
+
+a.settings:hover {
+    color: #000;
+}
+
+.branding {
+    font-size: 1.125rem;
+    font-weight: 400;
+}
+
+.widget-weather .location {
+    font-size: 1.875rem;
+    font-weight: 600;
+}
+
+.widget-weather .temperature {
+    font-size: 7.5rem;
+    font-weight: 700; 
+}
+
+.widget-weather .conditions {
+    font-size: 1.875rem;
+    font-weight: 600;
+    line-height: .25;
+    margin-bottom: 27px;
+    text-transform: capitalize;
+}
+
+.widget-weather .temp-range {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.more {
+    font-size: 1.5rem;
+    margin-left: auto;
+}
+
+.weather-forecast h2 {
+    display: none;
+}
+
+.widget-forecast {
+    display: flex;
+    /*justify-content: space-between;*/
+    list-style: none;
+    margin: 0;
+    padding: 16px 0 16px 0;
+}
+
+.widget-forecast li {
+    border-top: 5px #FFF solid;
+    display: inline-block;
+    flex-grow: 1;
+    margin: 0 10px 0 0;
+    padding: 10px 0 0 0;
+}
+
+.widget-forecast .last-item {
+    margin-right: 0;
+}
+
+.widget-forecast .date {
+    font-size: 1rem;
+}
+
+.widget-forecast .icon {
+    font-size: 2rem;
+    padding: 0;
+    margin: 7px 0 0 0;
+}
+
+.widget-forecast .temp-range {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.widget-forecast .conditions {
+	display: none;
+}
+
+/*
+ * Settings Page 
+ */
+body.settings {
+    background-image: none;
+}
+
+.widget-settings header {
+    display: flex;
+    align-items: center;
+}
+
+a.close {
+    background: none;
+    border: none;
+    color: #FFF;
+    font-size: 1.875rem;
+    margin-left: auto;
+	text-decoration: none;
+}
+
+a.close:hover {
+    color: #000;
+}
+
+p.location {
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: .7;
+    margin-bottom: 18px;
+}
+
+.copyright,
+.copyright p {
+    font-size: 1rem;
+    margin-top: 36px;
+}
+
+.copyright p {
+    margin-bottom: 16px;
+}
+
+.location-section {
+    margin-top: 36px;
+}
+
+.form-section {
+    margin-bottom: 36px;
+}
+
+#update-button {
+    margin-left: 5px;
+    width: auto;
+}
+
+.error {
+    color: #CC0000;
+}
+
+/*
+ * Flexbox Utilities
+ */
+
+.flex-row {
+    align-items: flex-end;
+    display: flex;
+}
+
+.flex-bottom {
+    margin-top: auto;
+}
+
+.flex-right {
+    margin-left: auto;
+}
+
+.mobile-hide {
+    display: none;
+}
+
+/*
+ * Weather Themes - Mobile 
+ */
+
+/* Clear Skies */
+body.sunny.day {
+    background-color: #3399FF;
+    background-image: url(../images/clear_day.png);
+}
+
+/* Partly cloudy daytime */
+body.partly-cloudy.day {
+	background-color: #3399FF;
+	background-image: url(../images/partly_cloudy_day.png);
+	
+}
+
+.partly-cloudy.day .icon-settings {
+	color: #3399FF;
+}
+
+/* Cloudy daytime */
+body.cloudy.day {
+	background-color: #3366CC;
+	background-image: url(../images/cloudy_day.png);
+}
+
+.cloudy.day .icon-settings {
+	color: #3366CC;
+}
+
+/* Overcast daytime */
+body.overcast.day {
+	background-color: #5B5F66;
+	background-image: url(../images/overcast_day.png);
+}
+
+.overcast.day .icon-settings {
+	color: #5B5F66;
+}
+
+/* Light rain daytime */
+body.light-rain.day {
+	background-color: #3399FF;
+	background-image: url(../images/light_rain_day.png);
+	
+}
+
+.light-rain.day .icon-settings {
+	color: #3399FF;
+}
+
+/* Rain daytime */
+body.rain.day {
+	background-color: #3366CC;
+	background-image: url(../images/rain_day.png);
+}
+
+.rain.day .icon-settings {
+	color: #3366CC;
+}
+
+/* Showers daytime */
+body.showers.day {
+	background-color: #5B5F66;
+	background-image: url(../images/showers_day.png);
+}
+
+.showers.day .icon-settings {
+	color: #000;
+}
+
+/* Thunderstorm daytime */
+body.thunderstorm.day {
+	background-color: #5B5F66;
+	background-image: url(../images/thunderstorm_day.png);
+}
+
+.thunderstorm.day .icon-settings {
+	color: #000;
+}
+
+/* Snow daytime */
+body.snow.day {
+	background-color: #3366CC;
+	background-image: url(../images/snow_day.png);
+}
+
+.snow.day .icon-settings {
+	color: #3366CC;
+}
+
+/* Fog daytime */
+body.foggy.day {
+	background-color: #8A8F99;
+	background-image: url(../images/fog_day.png);
+}
+
+.foggy.day .icon-settings {
+	color: #FFF;
+}
+
+
+
+/* 
+ * Media Queries 
+ */
+
+@media (min-width: 768px) {
+	
+	/* Forecast page */
+    
+    body {
+        padding: 0 20px;
+    }
+	
+	.container {
+		display: flex;
+		flex-direction: column;
+		margin: auto;
+		max-width: 960px;
+		padding: 16px 0;
+		width: 100%;
+	}
+	
+	.weather-today {
+		height: 100%;
+	}
+	
+	.weather-today .content-row {
+		margin: auto 0 auto 0;
+	}
+	
+	.weather-today .date {
+		font-size: 1.5rem;
+	}
+	
+	.weather-today .location,
+	.weather-today .conditions {
+		font-size: 2.25rem;
+	}
+	
+	.weather-today .temperature {
+		font-size: 10rem;
+	}
+	
+	.weather-today .temp-range {
+		font-size: 2rem;
+		margin-top: 35px;
+	}
+	
+	.weather-today .more {
+		display: none;
+	}
+	
+	.widget-forecast {
+		padding-bottom: 0;
+	}
+	
+	.widget-forecast .date {
+		font-size: 1.125rem;
+	}
+	
+	.widget-forecast .icon {
+		font-size: 4.5rem;
+	}
+	
+	.widget-forecast .temp-range {
+		font-size: 3rem;
+		font-weight: 800;
+	}
+	
+	.widget-forecast .conditions {
+		display: inline;
+		font-size: 1.5rem;
+		font-weight: 700;
+        text-transform: capitalize;
+	}
+	
+	.widget-forecast li {
+		margin-right: 20px;
+	}
+    
+    /* Settings Page */
+    
+    form button,
+    form input,
+    form fieldset {
+        max-width: 300px;
+    }
+    
+    form button {
+        width: auto;
+    }
+    
+    .widget-settings {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    
+    .copyright {
+        margin-top: auto;
+    }
+    
+    /* Utilities */
+    .mobile-hide {
+        display: inline;
+    }
+    
+    /*
+     * Weather Themes - Desktop
+     */
+
+    /* Clear Skies */
+    body.sunny.day {
+        background-image: url(../images/clear_day.svg);
+    }
+	
+	/* Partly cloudy daytime */
+	body.partly-cloudy.day {
+		background-image: url(../images/partly_cloudy_day.svg);
+	}
+
+	/* Cloudy daytime */
+	body.cloudy.day {
+		background-image: url(../images/cloudy_day.svg);
+	}
+	
+	/* Overcast daytime */
+	body.overcast.day {
+		background-image: url(../images/overcast_day.svg);
+	}
+
+	/* Light rain daytime */
+	body.light-rain.day {
+		background-image: url(../images/light_rain_day.svg);
+	}
+
+	/* Rain daytime */
+	body.rain.day {
+		background-image: url(../images/rain_day.svg);
+	}
+	
+	/* Showers daytime */
+	body.showers.day {
+		background-image: url(../images/showers_day.svg);
+	}
+	
+	/* Thunderstorm daytime */
+	body.thunderstorm.day {
+		background-image: url(../images/thunderstorm_day.svg);
+	}
+	
+	/* Snow daytime */
+	body.snow.day {
+		background-image: url(../images/snow_day.svg);
+	}
+	
+	/* Fog daytime */
+	body.foggy.day {
+		background-image: url(../images/fog_day.svg);
+	}
+
+}
