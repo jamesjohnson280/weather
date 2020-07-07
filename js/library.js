@@ -8,7 +8,6 @@ var DEFAULT_SETTINGS = {
     'location': 'new york, us',
     'location-name': 'New York',
     'units': 'imperial',
-    'key': 'f9d3b7c02465d1b9c4b872c909ccabae',
     'latitude': 40.7038704,
     'longitude': -74.0138541
 };
